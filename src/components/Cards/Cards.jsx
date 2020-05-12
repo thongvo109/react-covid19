@@ -22,7 +22,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
-              Infected
+              Số ca dương tính
             </Typography>
             <Typography variant="h5">
               <CountUp
@@ -36,7 +36,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               {new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2">
-              Number of active cases of COVID-19{" "}
+              Số ca dương tính {" "}
             </Typography>
           </CardContent>
         </Grid>
@@ -45,7 +45,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           className={cx(styles.card, styles.recovered)}>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
-              Recovered
+              Số ca hồi phục
             </Typography>
             <Typography variant="h5">
               <CountUp
@@ -59,7 +59,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
               {new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2">
-              Number of recoveries from COVID-19{" "}
+              Số ca hồi phục{" "}
             </Typography>
           </CardContent>
         </Grid>
@@ -71,7 +71,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
-              Deaths
+              Số người tử vong
             </Typography>
             <Typography variant="h5">
               <CountUp
@@ -80,12 +80,13 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 duration={2.5}
                 separator=","
               />
+              {" "}
             </Typography>
             <Typography color="textSecondary">
               {new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2">
-              Number of deaths caused by COVID-19{" "}
+              Số ca tử vong{" "}
             </Typography>
           </CardContent>
         </Grid>

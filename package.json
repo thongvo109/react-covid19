@@ -1,5 +1,6 @@
 {
   "name": "covid19",
+  "homepage": "http://thongvo.xyz",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
