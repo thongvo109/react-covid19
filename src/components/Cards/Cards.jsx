@@ -5,9 +5,10 @@ import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import CountUp from "react-countup";
 import styles from "./Cards.module.css";
 import cx from "classnames";
+import ReactLoading from 'react-loading';
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
-    return "Loading ...";
+    return <ReactLoading type={'spin'} color={"#fefe26"} height={50} width={50} />
   }
   return (
     <div className={styles.container}>
